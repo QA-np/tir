@@ -4273,18 +4273,14 @@ class WebappInternal(Base):
 
         if new_log_line:
             self.log.new_line(False, log_message)
-        self.log.save_file(routine_name)
-        if not self.config.skip_restart and len(self.log.list_of_testcases()) > 1 and self.config.initial_program != '':
+        if stack_item != "setUpClass" or stack_item == "setUpClass" and self.restart_counter == 2:
+            self.log.save_file(routine_name)
+        if not self.config.skip_restart and len(self.log.list_of_testcases()) > 1 and self.config.initial_program != '' and not self.restart_counter == 2:
             self.restart()
-        elif self.config.coverage and self.config.initial_program != '':
+        elif self.config.coverage and self.config.initial_program != '' and not self.restart_counter == 2:
             self.restart()
         else:
             self.driver.close()
-            
-        try:
-            self.driver.close()
-        except:
-            pass
 
         if self.restart_counter > 2:
             self.restart_counter = 0

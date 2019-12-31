@@ -160,10 +160,10 @@ class Log:
         table_rows_has_line = False
 
         if self.table_rows[1][10] == '':
-            self.table_rows[1][10] = '12.1.25'
+            self.table_rows[1][10] = self.config.release
 
         if self.table_rows[1][15] == '':
-            self.table_rows[1][15] = 'BRA'
+            self.table_rows[1][15] = self.config.country
 
         if self.table_rows[1][11] == '':
             self.table_rows[1][11] = 'TIMEOUT'
