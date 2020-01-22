@@ -24,7 +24,7 @@ config = {
         'Programming Language :: Python :: 3 :: Only',
         'Topic :: Documentation :: Sphinx',
         'Topic :: Software Development',
-        'Topic :: Software Development :: Libraries :: Python Modules'
+        'Topic :: Software Development :: Libraries :: Python Modules',
         'Topic :: Software Development :: Quality Assurance',
         'Topic :: Software Development :: Testing'
     ],
