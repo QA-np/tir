@@ -4369,6 +4369,8 @@ class WebappInternal(Base):
                     self.driver.save_screenshot(path)
                 except Exception as e:
                     print(f"Warning Log Error save_screenshot exception {str(e)}")
+            else:
+                print(f'Warning get_testcase_stack not in log_test_case_log screenshot fail')
 
         if new_log_line:
             self.log.new_line(False, log_message)
