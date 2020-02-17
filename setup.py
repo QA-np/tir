@@ -14,7 +14,7 @@ config = {
     'Script Samples': 'https://github.com/totvs/tir-script-samples'
     },
     'author_email': '',
-    'version': '1.13.0', 
+    'version': '1.13.13', 
     'license': 'MIT',
     'keywords': 'test automation selenium tir totvs protheus',
     'classifiers':[
